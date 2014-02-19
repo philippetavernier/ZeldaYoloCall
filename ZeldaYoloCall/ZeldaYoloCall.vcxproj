@@ -72,14 +72,17 @@
     <ClCompile Include="AnimatedSprite.cpp" />
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Invokation.cpp" />
+    <ClCompile Include="Starter.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimatedSprite.hpp" />
     <ClInclude Include="Animation.hpp" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="Game.hpp" />
+    <ClInclude Include="Invokation.hpp" />
+    <ClInclude Include="Starter.hpp" />
+    <ClInclude Include="TiledMap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,7 @@
-#include "Game.h"
+#include "Starter.hpp"
 int main() {
 
-	Game instance;
+	Starter instance;
 	instance.Run();
 
 	return (EXIT_SUCCESS);
