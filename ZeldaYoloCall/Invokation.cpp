@@ -1,5 +1,4 @@
 #include "Invokation.hpp"
-#include "Utilities.h"
 #include <iostream>
 
 Invokation::Invokation() : _currentMusicName("Intro.ogg"), _currentTextSlide(""), _currentSoundName("")
@@ -9,12 +8,16 @@ void Invokation::testAndLoad(bool state, std::string name)
 {
 	if (!state)
 	{
-		console("Failed to load ressource : " + name, 1);
+		console("Failed to load a ressource = " + name, 1);
 		std::getchar();
 		exit(-1);
 	}
 	else
-		console(name + " Loaded 100 %", 1);
+	{
+		if (name != "")
+			console(name + " Loaded 100 %", 1);
+	}
+		
 }
 
 void Invokation::invokeMusic(std::string MusicName, unsigned short int volume, bool isLooping, float offset)
@@ -43,6 +46,18 @@ void Invokation::invokeSound(std::string SoundName, unsigned short int volume)
 		console("Invoking sound : " + SoundName, 2);
 		_currentSound.play();
 	}
+}
+
+sf::Sprite Invokation::invokeSprite(sf::Texture* texture, std::string texturePath, float posX, float posY, bool isSmooth)
+{
+	sf::Sprite toReturn;
+		testAndLoad((*texture).loadFromFile("src\\" + texturePath));
+					(*texture).setSmooth(isSmooth);
+		toReturn.setTexture((*texture));
+		toReturn.setPosition(posX, posY);
+			console(texturePath + " loaded 100 %", 1);
+		
+			return(toReturn);
 }
 
 	void Invokation::console(std::string str, unsigned int type)

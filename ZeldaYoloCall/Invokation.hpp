@@ -19,12 +19,16 @@ class Invokation
 	public:
 		Invokation();
 
-		void invokeMusic(std::string, unsigned short int = 50, bool = true, float = 0);
+		void invokeMusic(std::string, unsigned short int=50, bool=true, float=0);
 		void changeIntroSlide(std::string, short int, unsigned short int, float, float, int, int);
+		sf::Sprite invokeSprite(sf::Texture*, std::string, float, float, bool=false);
 		void invokeSound(std::string, unsigned short int);
-		void testAndLoad(bool, std::string);
-		void console(std::string, unsigned int=0);
+		void testAndLoad(bool, std::string="");
+		void console(std::string, unsigned int=255);
 		void invokeLog(void);
+
+		void loadGame(std::istream& in);
+		void saveGame(std::ostream& out);
 
 		sf::Music getMusic();
 		sf::Sound getSound();
@@ -36,9 +40,10 @@ class Invokation
 					_currentSoundName,
 					_oldMusicName;
 
-		sf::Music _currentMusic;
+		sf::Music       _currentMusic;
+	    sf::Sound       _currentSound;
 		sf::SoundBuffer _soundBuffer;
-		sf::Sound _currentSound;
+		
 
 
 };

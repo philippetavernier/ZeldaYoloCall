@@ -73,6 +73,7 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Invokation.cpp" />
+    <ClCompile Include="NpcFactory.cpp" />
     <ClCompile Include="Starter.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -81,6 +82,7 @@
     <ClInclude Include="Animation.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="Invokation.hpp" />
+    <ClInclude Include="NpcFactory.hpp" />
     <ClInclude Include="Starter.hpp" />
     <ClInclude Include="TiledMap.h" />
   </ItemGroup>

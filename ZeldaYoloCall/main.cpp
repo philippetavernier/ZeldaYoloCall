@@ -1,4 +1,5 @@
 #include "Starter.hpp"
+
 int main() {
 
 	Starter instance;
